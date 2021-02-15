@@ -6,12 +6,21 @@
 // Description : Hello World in C, Ansi-style
 //============================================================================
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 
 #include "stack.h"
 
+using namespace std;
+
 int main(void) {
-	puts("Hello World!!!");
+
+	cout<<"Hello world!" << endl;
+
+	stack MyStack;
+
+	cout<<MyStack.size();
+
+	cout<<MyStack.pop();
+
 	return EXIT_SUCCESS;
 }

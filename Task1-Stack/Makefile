@@ -1,11 +1,12 @@
 CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
 
-OBJS =		Task1-Stack.o
+OBJS =		Task1-Stack.o stack.o
 
 LIBS =
 
-TARGET =	Task1-Stack
+TARGET =	build/Task1-Stack
 
+#link command
 $(TARGET):	$(OBJS)
 	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
 
