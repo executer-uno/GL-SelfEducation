@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "stack.h"
+
 int main(void) {
 	puts("Hello World!!!");
 	return EXIT_SUCCESS;
