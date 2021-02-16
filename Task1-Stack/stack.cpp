@@ -8,21 +8,28 @@
 #include "stack.h"
 
 	//create stack with number of elements
-	void stack::create(int){
+	void stack::create(int size){
 
 	}
 
 	//add element to stack
-	void stack::push(int){
+	void stack::push(int value){
+
+		if(_root == nullptr){													// Check if stack initialized
+			std::logic_error description("push called for unitialized stack object");
+			throw description;
+		}
+
 
 	}
 
 	//get element from stack
 	int	 stack::pop(){
 
-
-		std::logic_error description("Reinit leads to memory leaking");
-		throw description;
+		if(_head == 0){															// Check if something in stack to pop
+			std::logic_error description("pop called for empty stack object");
+			throw description;
+		}
 
 		return 0;
 	}

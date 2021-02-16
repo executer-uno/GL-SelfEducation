@@ -12,8 +12,8 @@
 
 class stack{
 private:
-	int  _size = 0;
-	int  _head = 0;
+	uint  _size = 0;
+	uint  _head = 0;
 	int* _root = nullptr;
 
 public:
