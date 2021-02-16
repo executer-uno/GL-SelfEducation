@@ -1,7 +1,7 @@
 //============================================================================
-// Name        : Task1-Stack.cpp
-// Author      : 
-// Version     :
+// Name        : Task3-Linux.cpp
+// Author      : PBazh
+// Version     : 1
 // Copyright   : Your copyright notice
 // Description : Hello World in C, Ansi-style
 //============================================================================
@@ -13,14 +13,17 @@ using namespace std;
 
 
 
-int main(void) {
+int main(int argc, char* argv[]) {
 
-	string line;
+	if(argc == 2){
+		cout << "Path to scan files: " << argv[1] << endl;
 
-    cout << "HELLO > " && getline(cin, line);
+	}
+	else {
+		cout << "Programm requires only one argument - path to scan files" << endl;
+	}
 
-
-    cout << "Goodbye.\n";
+    cout << "Goodbye."<< endl;
 	return EXIT_SUCCESS;
 }
 

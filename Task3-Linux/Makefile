@@ -1,10 +1,10 @@
 CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
 
-OBJS =		Task2-Fibonacci.o
+OBJS =		Task3-Linux.o
 
 LIBS =
 
-TARGET =	build/Task2-Fibonacci
+TARGET =	build/Task3-Linux
 
 #link command
 $(TARGET):	$(OBJS)
