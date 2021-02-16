@@ -14,13 +14,33 @@ using namespace std;
 
 int main(void) {
 
-	cout<<"Hello world!" << endl;
-
 	stack MyStack;
 
-	cout<<MyStack.size();
+	MyStack.create(10);
 
-	cout<<MyStack.pop();
+	for(int i=0; i<10; i++){
+		MyStack.push(i);
+	}
+
+	for(int i=0; i<10; i++){
+		cout << MyStack.pop() << endl;
+	}
+
+	for(int i=10; i<20; i++){
+		MyStack.push(i);
+	}
+
+	MyStack.resize(MyStack.size()*2);
+
+	for(int i=10; i<20; i++){
+		MyStack.push(i);
+	}
+
+	for(int i=0; i<20; i++){
+		cout << MyStack.pop() << endl;
+	}
+
+	cout << "Done" << endl;
 
 	return EXIT_SUCCESS;
 }

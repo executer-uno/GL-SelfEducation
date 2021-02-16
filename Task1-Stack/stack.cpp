@@ -24,20 +24,26 @@
 	//add element to stack
 	void stack::push(int value){
 
-		if(_root == nullptr){													// Check if stack initialized
-			std::logic_error description("push called for unitialized stack object");
-			throw description;
+		if((_head < _size) && (_root != nullptr)){
+			_root[_head++] = value;
 		}
-
-		_root[_head++] = value;
-
+		else{
+			if(_root == nullptr){												// Check if stack initialized
+				std::logic_error description("push called for unitialized stack object");
+				throw description;
+			}
+			else{																// Check if there are any room left in stack
+				std::logic_error description("no free space for another push");
+				throw description;
+			}
+		}
 	}
 
 	//get element from stack
 	int	 stack::pop(){
 
-		if(_head != 0){													// Check if something in stack to pop
-			return _root[_head--];
+		if(_head != 0){															// Check if something in stack to pop
+			return _root[--_head];
 		}
 		else{
 			std::logic_error description("pop called for empty stack object");
@@ -77,11 +83,9 @@
 		delete[] swap_temp;
 
 		_size = newsize;
-
-
 	}
 
-	void stack::~stack(){
+	stack::~stack(){
 		if(_size){
 			delete[] _root;
 		}

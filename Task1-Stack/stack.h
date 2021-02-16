@@ -23,7 +23,7 @@ public:
 	int  capacity();	//get amount of elements in stack
 	int  size();		//maximum amount of elements
 	void resize(uint);	//increase/decrease size of stack
-	void ~stack();		//object destructor
+	~stack();			//object destructor
 };
 
 
