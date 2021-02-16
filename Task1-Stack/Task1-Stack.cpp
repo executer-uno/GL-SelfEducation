@@ -29,7 +29,7 @@ command_code getCmd(string const &, string &);
 
 int main(void) {
 
-    for (string line; cout << "APP > " && getline(cin, line); )
+    for (string line; cout << "STACK (" << MyStack.capacity() << "/" << MyStack.size() << ") > " && getline(cin, line); )
     {
 		process(line);
     }
