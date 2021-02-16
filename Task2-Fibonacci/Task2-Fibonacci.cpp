@@ -27,13 +27,14 @@ int main(void) {
     switch(n){
     case 0:
     case 1:
-
+    	cout << "Summ of elements is 0" << endl;
     	break;
     case 2:
-
+    	cout << "Summ of elements is 1" << endl;
     	break;
     default:
-        sum_fibonacci(0,1,n-3);
+    	uint summ = sum_fibonacci(0,1,n-3);
+    	cout << "Summ of elements is " << summ << endl;
     }
 
     cout << "Goodbye.\n";
@@ -49,8 +50,7 @@ uint sum_fibonacci(uint i, uint j, uint n){
 	cout << "next element " << i << " + " << j << " = " << i+j << endl;
 
 	if(n){
-		sum_fibonacci(j, i+j, --n);
+		return i+j+sum_fibonacci(j, i+j, --n);
 	}
-
-	return 0;
+	return i+j+1;
 }
