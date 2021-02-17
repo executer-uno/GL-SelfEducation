@@ -8,7 +8,7 @@ TARGET =	build/Task3-Linux
 
 #link command
 $(TARGET):	$(OBJS)
-	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LIBS) -pthread
 
 all:	$(TARGET)
 
